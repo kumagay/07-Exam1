@@ -140,7 +140,7 @@ def problem4(m):
             sum = sum + 1
     return sum
     # -------------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # DONE: 7. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
