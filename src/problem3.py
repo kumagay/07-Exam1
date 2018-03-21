@@ -6,7 +6,7 @@ Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
 """  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
-
+import math
 
 def main():
     """ Calls the   TEST   functions in this module. """
@@ -93,10 +93,22 @@ def problem3(rect, n, window):
       :type window:  rg.RoseWindow
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function, TESTING each step as you go.
+    # DONE: 2. Implement and test this function, TESTING each step as you go.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
+    rect.attach_to(window)
+
+    x = max(rect.corner_1.x, rect.corner_2.x)
+    y = max(rect.corner_1.y, rect.corner_2.y)
+    for k in range(n):
+
+
+        circle = rg.Circle(rg.Point(x, y), rect.get_height() / 2)
+        circle.attach_to(window)
+        x = circle.center.x + (circle.radius / math.sqrt(2) * 2)
+        y = circle.center.y + (circle.radius / math.sqrt(2) * 2)
+        #circle.move_by(circle.radius, circle.radius)
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
