@@ -135,8 +135,8 @@ def problem4(m):
                                  (i.e., it is prime)
     """
     sum = 0
-    for k in range(m-2):
-        if m % (k+2) == 0:
+    for k in range(m-1):
+        if m % (k+2) == 0 and k+2 != m:
             sum = sum + 1
     return sum
     # -------------------------------------------------------------------------
